@@ -1,0 +1,13 @@
+{%extends 'app/base.html' %}
+{%load static %}
+{%block content%}
+<h6 class="mb-3 text-uppercase p-3 shadow-sm bg-light-primary"><i class='lni lni-bookmark mx-3'></i>Recherche d'un fichier partagé</h6>
+<hr/>
+<div class="card">
+	<div class="card-body">
+        <h3>Slug </h3>
+        <input type="text" id="slugToCopy" value="{{media.slug}}" readonly> <button class="btn btn-success" id="copyBtn">Copy</button>
+        <a href="{{media.document.url}}" download="{{media.document_name}}"><button class="btn btn-primary">Télécharger</button></a>
+    </div>
+</div>
+{%endblock%}

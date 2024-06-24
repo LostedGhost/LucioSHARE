@@ -1,0 +1,25 @@
+{%extends 'app/base.html' %}
+{%load static %}
+{%block content%}
+<h6 class="mb-3 text-uppercase p-3 shadow-sm bg-light-primary"><i class='lni lni-bookmark mx-3'></i>Recherche d'un fichier partagé</h6>
+<hr/>
+<div class="card">
+	<div class="card-body">
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="tab-pane" role="tabpanel" aria-labelledby="step-1">
+                <h3 class="text-center">Informations du membre</h3>
+                <div class="row pb-5 col-sm-12 mx-auto">
+                    <div class="col-sm-12 mt-3">
+                        <label class="form-label mr-3 col-sm-4">Fichier à téléverser: </label>
+                        <input type="file" name="media" id="form_photo" required>
+                    </div>
+                    <div class="text-center my-4">
+                        <button type="submit" class="btn btn-love" id="btn-valid"><i class="bx bx-upload"></i> Téléverser</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+{%endblock%}
